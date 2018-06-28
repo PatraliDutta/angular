@@ -1,0 +1,15 @@
+<p>
+  modelform works!
+</p>
+
+<form [formGroup]="hobbyForm" (ngSubmit)="submitUserHobby(hobbyForm.value)">
+  First Name : <input type="text" formControlName='fname'><br>
+  Last Name : <input type="text" formControlName='lname'><br>
+  Hobby : <select name="hobby" formControlName='hobby'>
+    <option value = "dancing">Dancing</option>
+     <option value = "singing">Singing</option>
+     <option value = "coding">Coding</option>
+  </select>
+  <br>
+  <input type="submit" value="Submit" [disabled]="!hobbyForm.valid">
+</form>

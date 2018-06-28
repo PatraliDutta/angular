@@ -1,0 +1,8 @@
+<p>
+  parent works! I am {{myName}}
+</p>
+
+<input type='text' [(ngModel)]='myName'> Your input: {{myName}}
+<hr>
+
+<app-child [myName]='myName' (parcelToParent)='receivedFromChild($event)'></app-child>
